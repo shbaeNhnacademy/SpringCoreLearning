@@ -7,7 +7,8 @@ public class MessageSendService {
         this.messageSender = messageSender;
     }
 
-    public void doSendMessage(User user, String message) {
-        messageSender.sendMessage(user, message);
+    public void doSendMessage() {
+         User user = new User("a@b.com", "8201099914501");
+        messageSender.sendMessage(user, "hello~");
     }
 }
