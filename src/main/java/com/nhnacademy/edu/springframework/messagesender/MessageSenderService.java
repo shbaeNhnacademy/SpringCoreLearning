@@ -1,9 +1,9 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
-public class MessageSendService {
+public class MessageSenderService {
     private final MessageSender messageSender;
 
-    public MessageSendService(MessageSender messageSender) {
+    public MessageSenderService(MessageSender messageSender) {
         this.messageSender = messageSender;
     }
 
