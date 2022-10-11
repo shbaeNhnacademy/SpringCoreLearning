@@ -6,15 +6,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("classpath:/beans.xml");
+                new ClassPathXmlApplicationContext("classpath:/beans.xml"); //실행 -> 조립
 
-        MessageSender smsMessageSender = context.getBean("smsMessageSender", MessageSender.class);
-        MessageSender emailMessageSender = context.getBean("emailMessageSender", MessageSender.class);
+//        MessageSender smsMessageSender = context.getBean("smsMessageSender", MessageSender.class);
+//        MessageSender emailMessageSender = context.getBean("emailMessageSender", MessageSender.class);
+//
+//        new MessageSendService(smsMessageSender).doSendMessage(user,msg);
+//        new MessageSendService(emailMessageSender).doSendMessage(user,msg);
+        User user = new User("a@b.com", "820109");
+        String msg = "hi hello";
 
-        User user = new User("a@b.com", "8201099914501");
-        new MessageSendService(smsMessageSender).doSendMessage(user,"Hello~~");
-        new MessageSendService(emailMessageSender).doSendMessage(user,"Hello~~");
+        System.out.println("======================================");
+
+        new MessageSendService(context.getBean("smsMessageSender", MessageSender.class)).doSendMessage(user,msg);
+        new MessageSendService(context.getBean("emailMessageSender", MessageSender.class)).doSendMessage(user,msg);
+        new MessageSendService(context.getBean("smsMessageSender", MessageSender.class)).doSendMessage(user,msg);
+        new MessageSendService(context.getBean("emailMessageSender", MessageSender.class)).doSendMessage(user,msg);
     }
+    // app 종료 =>  spring bean 종료
 
 
 }
