@@ -17,6 +17,8 @@ public class Main {
         new MessageSendService(context.getBean("emailMessageSender", MessageSender.class)).doSendMessage(user,msg);
         new MessageSendService(context.getBean("smsMessageSender", MessageSender.class)).doSendMessage(user,msg);
         new MessageSendService(context.getBean("emailMessageSender", MessageSender.class)).doSendMessage(user,msg);
+
+        context.close();
     }
     // app 종료 =>  spring bean 종료
 

@@ -10,7 +10,8 @@
     </bean>
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender"
-          scope="prototype">
+          destroy-method="cleanup">
+<!--        scope="prototype"  -->
     </bean>
 
 </beans>

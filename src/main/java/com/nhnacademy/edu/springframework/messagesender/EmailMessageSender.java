@@ -11,5 +11,8 @@ public class EmailMessageSender implements MessageSender {
         System.out.println("EMAIL Message Sent to " + user.getEmail() + " : " + message);
     }
 
+    public void cleanup() {
+        System.out.println(" + EmailMessageSender destroy");
+    }
 
 }
