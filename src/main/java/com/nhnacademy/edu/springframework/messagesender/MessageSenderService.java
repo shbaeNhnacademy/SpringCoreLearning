@@ -1,5 +1,7 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
+import org.springframework.stereotype.Controller;
+
 public class MessageSenderService {
     private MessageSender messageSender;
 //
@@ -10,6 +12,7 @@ public class MessageSenderService {
 
     public MessageSenderService() {
     }
+
 
     public void setSmsMessageSender(MessageSender messageSender) {
         System.out.println("MessageSenderService.setMessageSender");
