@@ -6,7 +6,7 @@
 
 
     <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.messagesender.SmsMessageSender"
-          scope="singleton">
+          scope="singleton" init-method="init">
     </bean>
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender"

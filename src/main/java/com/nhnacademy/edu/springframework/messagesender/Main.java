@@ -8,11 +8,6 @@ public class Main {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:/beans.xml"); //실행 -> 조립
 
-//        MessageSender smsMessageSender = context.getBean("smsMessageSender", MessageSender.class);
-//        MessageSender emailMessageSender = context.getBean("emailMessageSender", MessageSender.class);
-//
-//        new MessageSendService(smsMessageSender).doSendMessage(user,msg);
-//        new MessageSendService(emailMessageSender).doSendMessage(user,msg);
         User user = new User("a@b.com", "820109");
         String msg = "hi hello";
 
