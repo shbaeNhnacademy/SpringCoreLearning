@@ -10,12 +10,13 @@
     </bean>
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender"
-          destroy-method="cleanup">
-<!--        scope="prototype"  -->
+          destroy-method="cleanup" >
+<!--    scope="prototype"     -->
     </bean>
 
     <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService">
-        <constructor-arg ref="smsMessageSender" />
+<!--        <constructor-arg ref="emailMessageSender" />-->
+        <property name="messageSender" ref="smsMessageSender" />
     </bean>
 
 </beans>
