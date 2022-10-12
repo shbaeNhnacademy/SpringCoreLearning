@@ -1,21 +1,16 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
+import com.nhnacademy.edu.springframework.messagesender.annotation.SMS;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 
 public class MessageSenderService {
-    private MessageSender messageSender;
-//
-//    public MessageSenderService(MessageSender messageSender) {
-//        this.messageSender = messageSender;
-//    }
+    private final MessageSender messageSender;
 
-
-    public MessageSenderService() {
-    }
-
-
-    public void setSmsMessageSender(MessageSender messageSender) {
-        System.out.println("MessageSenderService.setMessageSender");
+    @Autowired
+    public MessageSenderService(@SMS MessageSender messageSender) {
         this.messageSender = messageSender;
     }
 
