@@ -2,8 +2,10 @@ package com.nhnacademy.edu.springframework.messagesender;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class MessageSenderService {
     private final MessageSender messageSender;
 
@@ -12,7 +14,12 @@ public class MessageSenderService {
     @Autowired //@SMS
     public MessageSenderService(MessageSender messageSender) {
         this.messageSender = messageSender;
+        System.out.println("name = " + name);
     }
+
+
+//    public MessageSenderService() {
+//    }
 
     public void doSendMessage(User user, String message) {
         messageSender.sendMessage(user, message);

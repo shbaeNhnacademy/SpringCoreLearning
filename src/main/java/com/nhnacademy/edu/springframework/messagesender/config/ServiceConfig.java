@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class ServiceConfig {
 
-    @Autowired
-    private SmsMessageSender smsMessageSender;
+//    @Autowired
+//    private SmsMessageSender smsMessageSender;
 
-    @Bean
-    public MessageSenderService messageSenderService() {
-        return new MessageSenderService(smsMessageSender);
-    }
+//    @Bean
+//    public MessageSenderService messageSenderService() {
+//        return new MessageSenderService(smsMessageSender);
+//    }
 }

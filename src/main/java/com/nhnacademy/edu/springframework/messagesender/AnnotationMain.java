@@ -16,5 +16,9 @@ public class AnnotationMain {
         MessageSenderService bean = context.getBean(MessageSenderService.class);
         bean.doSendMessage(user, msg);
 
+        context.getBeanFactory().getBeanNamesIterator().forEachRemaining(s -> {
+            System.out.println("s = " + s);
+        });
+
     }
 }
