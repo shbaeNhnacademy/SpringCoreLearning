@@ -8,6 +8,8 @@ public class AnnotationMain {
 //        String basePackage = "com.nhnacademy.edu.springframework.messagesender";
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
 
+        //MessageSender smsMessageSender1 = MessageSender.class.cast(context.getBean("smsMessageSender"));
+        // -> 이름으로 getBean해서 type casting하는거
         MessageSender smsMessageSender = context.getBean("smsMessageSender", MessageSender.class);
         MessageSender emailMessageSender = context.getBean("emailMessageSender", MessageSender.class);
 
