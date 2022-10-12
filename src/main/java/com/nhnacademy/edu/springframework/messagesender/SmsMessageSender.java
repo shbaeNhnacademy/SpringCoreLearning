@@ -1,6 +1,14 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SmsMessageSender implements MessageSender {
+
+    @Value("${from}")
+    private String name;
+
+    @Value("${mail.domain}")
+    private String emailDomain;
     public SmsMessageSender() {
         System.out.println("SmsMessageSender.SmsMessageSender");
     }
@@ -10,6 +18,7 @@ public class SmsMessageSender implements MessageSender {
     }
 
     public void init() {
+        System.out.println("emailDomain = " + emailDomain);
         System.out.println(" + SmsMessageSender initializing");
     }
 }
