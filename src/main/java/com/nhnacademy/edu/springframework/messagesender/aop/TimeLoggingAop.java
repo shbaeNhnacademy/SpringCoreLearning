@@ -22,8 +22,9 @@ public class TimeLoggingAop {
     }
 
 
-    @Before("@annotation(timeLogging) && args(user,s2,myName)")
-    public void before(JoinPoint joinPoint, TimeLogging timeLogging, User user, String s2, String myName) { //
+
+    @Before("@annotation(timeLogging) && args(user,msg,myName)")
+    public void before(JoinPoint joinPoint, TimeLogging timeLogging, User user, String msg, String myName) { //
         System.out.println("===================================================");
         System.out.println("signature name = " + joinPoint.getSignature().getName());
         System.out.println("timeLogging value = " + timeLogging.value());
