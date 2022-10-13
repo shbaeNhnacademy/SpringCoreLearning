@@ -10,7 +10,7 @@ public class Main {
             User user = new User("a@b.com", "820109");
             String msg = "hi hello";
             System.out.println("======================================");
-            messageSenderService.doSendMessage(user, msg);
+//            messageSenderService.doSendMessage(user, msg);
         }
     }
 }
