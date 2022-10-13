@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.messagesender.aop;
 
+import com.nhnacademy.edu.springframework.messagesender.User;
 import com.nhnacademy.edu.springframework.messagesender.annotation.TimeLogging;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -21,8 +22,8 @@ public class TimeLoggingAop {
     }
 
 
-    @Before("@annotation(timeLogging) && args(myName)")
-    public void before(JoinPoint joinPoint, TimeLogging timeLogging, String myName) { //
+    @Before("@annotation(timeLogging) && args(user,msg,myName)")
+    public void before(JoinPoint joinPoint, TimeLogging timeLogging, User user, String msg, String myName) { //
         System.out.println("===================================================");
         System.out.println("signature name = " + joinPoint.getSignature().getName());
         System.out.println("timeLogging value = " + timeLogging.value());
