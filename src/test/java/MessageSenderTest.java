@@ -28,16 +28,14 @@ public class MessageSenderTest {
     @Test
     public void testEmailMessageSenderToAnnotation() {
 //        ReflectionTestUtils.setField(messageSenderService, "messageSender", new EmailMessageSender());
-        when(messageSender.sendMessage(user, msg)).thenReturn(false);
+//        when(messageSender.sendMessage(user, msg)).thenReturn(false); // 안에 로직 상관없이 결과를 뱉어냄
         boolean acutal = messageSenderService.doSendMessage(user, msg);
 
-        Assertions.assertThat(acutal).isEqualTo(false);
+        Assertions.assertThat(acutal).isEqualTo(true);
     }
 
     @Test
     public void testSmsMessageSenderToMethod() {
-
-
         MessageSender sender = mock(MessageSender.class);
         MessageSenderService service = new MessageSenderService(sender);
 //        ReflectionTestUtils.setField(service, "messageSender", new SmsMessageSender());

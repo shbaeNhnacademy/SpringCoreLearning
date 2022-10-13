@@ -1,0 +1,17 @@
+
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ö¥§ó8§¼Ùã¼0
+X	java:S125"<This block of commented-out lines of code should be removed.(ÑéÔ8Ü‘Ìã¼0
+]	java:S125"<This block of commented-out lines of code should be removed.(Ëæô×ÿÿÿÿÿ8Ð÷Éã¼0
+}
+java:S1128"[Remove this unused import 'com.nhnacademy.edu.springframework.messagesender.MessageSender'.(»µÇÊþÿÿÿÿ8àÏ¾×¼0
+„
+java:S1128"bRemove this unused import 'com.nhnacademy.edu.springframework.messagesender.MessageSenderService'.(©Ò­ÿÿÿÿÿ8Ð÷Éã¼0
+{
+java:S1128"^Remove this unused import 'com.nhnacademy.edu.springframework.messagesender.SmsMessageSender'.(íö÷½8Ý‘Ìã¼0
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8Ý‘Ìã¼0
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Þ8Ð÷Éã¼0
+s
+java:S1128"QRemove this unused import 'org.springframework.context.annotation.Configuration'.(¬²Úäþÿÿÿÿ8©¼Ùã¼0
