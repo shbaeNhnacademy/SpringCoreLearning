@@ -10,8 +10,9 @@ public class EmailMessageSender implements MessageSender {
         System.out.println("EmailMessageSender.EmailMessageSender");
     }
 
-    public void sendMessage(User user, String message) {
+    public boolean sendMessage(User user, String message) {
         System.out.println("EMAIL Message Sent to " + user.getEmail() + " : " + message);
+        return true;
     }
 
     public void cleanup() {

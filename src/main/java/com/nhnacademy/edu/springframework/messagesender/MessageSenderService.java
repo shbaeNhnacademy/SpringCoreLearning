@@ -15,19 +15,20 @@ public class MessageSenderService {
     @Autowired //@SMS
     public MessageSenderService(MessageSender messageSender) {
         this.messageSender = messageSender;
-        System.out.println("name = " + name);
+//        System.out.println("name = " + name);
     }
 
 
-    public void doSendMessage(User user, String message) {
-        messageSender.sendMessage(user, message);
-        System.out.println("name = " + name);
+    public boolean doSendMessage(User user, String message) {
+//        System.out.println("name = " + name);
+        return messageSender.sendMessage(user, message);
     }
 
     @TimeLogging(value = "직접 만든 어노테이션 ")
-    public void doSendMessage(User user, String message,String myName) {
+    public String doSendMessage(User user, String message,String myName) {
         messageSender.sendMessage(user, message);
         System.out.println("myName = " + myName);
         System.out.println("프로퍼티스 파일 name = " + name);
+        return myName;
     }
 }

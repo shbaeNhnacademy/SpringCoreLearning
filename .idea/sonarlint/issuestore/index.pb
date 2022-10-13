@@ -7,5 +7,3 @@ W
 Rsrc/main/java/com/nhnacademy/edu/springframework/messagesender/annotation/SMS.java,0/f/0fe17749b2d60fba8dc5bded645e6d2fa3335ca1
 x
 Hsrc/main/java/com/nhnacademy/edu/springframework/messagesender/User.java,1/6/169a949bffafd00c4f742bd80b5a0a679a005bb7
-„
-Tsrc/main/java/com/nhnacademy/edu/springframework/messagesender/SmsMessageSender.java,f/6/f61bf037917ad337b83f30a9f337096d62e21ff9

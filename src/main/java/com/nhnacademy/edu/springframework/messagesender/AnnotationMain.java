@@ -15,8 +15,7 @@ public class AnnotationMain {
 
         MessageSenderService bean = context.getBean(MessageSenderService.class);
 //        bean.doSendMessage(user, msg);
-        bean.doSendMessage(user, msg,"myName");
-
+        String myName = bean.doSendMessage(user, msg, "myName");
 
 
     }
