@@ -8,6 +8,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan(basePackages = {"com.nhnacademy.edu"})
 @PropertySource("classpath:sender.properties")
+@EnableAspectJAutoProxy
 public class MainConfig {
 
 //    @Bean

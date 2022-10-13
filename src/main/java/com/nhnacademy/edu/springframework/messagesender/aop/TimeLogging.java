@@ -1,0 +1,38 @@
+package com.nhnacademy.edu.springframework.messagesender.aop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StopWatch;
+
+@Component
+@Aspect
+public class TimeLogging {
+
+    @Pointcut("execution(* com.nhnacademy.edu.springframework.messagesender.MessageSenderService.*(..))")
+    private void pointcut() {
+    }
+
+    @Before("pointcut()")
+    private void beforeMethod(JoinPoint point) {
+        System.out.println("======== AOP 적용 ========   [" + point.getSignature().getName()+"]");
+    }
+
+    @Around("pointcut()")
+    public Object checkOperatingTime(ProceedingJoinPoint point) throws Throwable {
+
+        StopWatch stopWatch = new StopWatch("time Tracker");
+        try {
+            stopWatch.start();
+            Object proceed = point.proceed();
+            return proceed;
+        } finally {
+            stopWatch.stop();
+            System.out.println(stopWatch.prettyPrint() +"  "+ stopWatch.getTotalTimeMillis());
+        }
+    }
+}
